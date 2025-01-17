@@ -12,7 +12,7 @@
 }
 body{
     padding-top: 70px;
-    min-height: 200svh;
+    min-height: 100svh;
     width: 100vw;
 }
 
@@ -33,12 +33,27 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 }
+#hero .left::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 1;
+    background: radial-gradient(circle, #ffcc80, #ffccbc);
+    /* border-radius: 50%; */
+    z-index: -1;
+    opacity: .8;
+    filter: blur(100px);
+}
+
 #hero .left .content {
 }
 
 #hero .right{
+    background: url(../assets/images/splashBrown.png) no-repeat;
     flex: 1;
+    background-size: cover;
 }
 #hero .right img{
     height: 100%;
@@ -48,12 +63,12 @@ body{
 
 #hero .left .content h1{
     font-family: "Satisfy";
-    font-size: 42px;
-    color: #d87972;
+    font-size: 48px;
+    color: #b45650;
 }
 #hero .left .content h2{
     font-family: "Dancing Script";
-    color: #d87972;
+    color: #b45650;
 }
 
 #hero .left p{
@@ -64,12 +79,13 @@ body{
 
 nav{
     padding: 8px 16px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     position: fixed;
     width: 100%;
-    background-color: #c3d1d0;
+    background-color: #ffffff;
     top: 0;
     left: 0;
+    z-index: 999;
 }
 nav .container{
     display: flex;
@@ -89,24 +105,89 @@ nav ul li a:hover{
 }
 
 nav ul li a{
-    transition: .3s ease-in-out;
+    transition: .3s ease;
     display: inline-block;
     padding: 4px 8px;
     text-transform: capitalize;
     color: black;
+    border-radius: 4px;
 }
 #hero .left .social-handles{
     display: flex;
-    gap: 10px;
+    gap: 16px;
 }
 
+.icon:hover{
+    filter: brightness(130%) grayscale(30%);
+    transform: scale(1.2);
+}
 .icon{
-    width: 24px;
-    height: 24px;
+    transition: .3s ease-in-out;
+    width: 32px;
+    height: 32px;
     overflow: hidden;
 }
 
 .icon img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+section{
+    margin-bottom: 30px;
+    padding: 20px;
+}
+section h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: "Satisfy";
+    color: #b45650;
+}
+
+
+
+
+/* ===========  ABOUT =========== */
+#about{
+    border-radius: 20px;   
+    background: url(../assets/images/gradiant.jpg) no-repeat;
+    background-size: cover; 
+    position: relative;
+    overflow: hidden;
+}
+#about .backdrop{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    opacity: 0.3;
+    position: absolute;
+    z-index: 0;
+}
+   
+#about .content{
+    display: flex;
+    align-items: center;
+}
+#about .content .left{
+    flex: 2;
+    position: relative;
+    z-index: 10;
+}
+
+#about .content .left p{
+    margin-bottom: 16px;
+}
+
+#about .content .right{
+    flex: 1;
+    position: relative;
+    z-index: 10;
+}
+
+#about .content .right img{
     width: 100%;
     height: 100%;
     object-fit: contain;
