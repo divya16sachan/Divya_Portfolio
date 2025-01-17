@@ -1,197 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Divya Sachan">
+    <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Divya Sachan | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background-color: #121212;
-            color: #ffffff;
-        }
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            background-color: #1a1a1a;
-        }
+    <title>Divya Sachan Portfolio</title>
 
-        header h1 {
-            font-size: 24px;
-            color: #ffd700;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #ffffff;
-            font-weight: 400;
-        }
-
-        nav ul li a:hover {
-            color: #ffd700;
-        }
-
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 50px;
-        }
-
-        .hero-text {
-            max-width: 50%;
-        }
-
-        .hero-text h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .hero-text p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        .hero img {
-            border-radius: 0%;
-            width: 200px;
-            height: 200px;
-        }
-
-        .contact-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            color: #121212;
-            background-color: #ffd700;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .contact-button:hover {
-            background-color: #e6c200;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #1a1a1a;
-            margin-top: 50px;
-        }
-
-        footer p {
-            margin: 0;
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 10px;
-        }
-
-        .social-icons a {
-            text-decoration: none;
-            color: #ffffff;
-            font-size: 18px;
-        }
-
-        .social-icons a:hover {
-            color: #ffd700;
-        }
-
-        .image-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        width: 250px; 
-        height: 250px; 
-        margin: auto; 
-    }
-
-    .image-container img {
-        width: 230px; 
-        height: 230px;
-        border-radius: 0; 
-    }
-
-        
-    </style>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/utils.css">
 </head>
+
 <body>
-    <header>
-        <h1>Divya Sachan</h1>
-        <nav>
+    <nav>
+        <div class="container">
+            <div class="logo">Divya Sachan </div>
             <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="project.html">Projects</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="/">home</a></li>
+                <li><a href="/">about</a></li>
+                <li><a href="/">projects</a></li>
+                <li><a href="/">education</a></li>
+                <li><a href="/">contact</a></li>
+
             </ul>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <div class="hero-text">
-            <h2>Hello, I'm Divya Sachan</h2>
-            <p>I am Divya, an MCA candidate at Graphic Era Deemed to be University, with a proven academic record, including a 9.2 CGPA in BCA. I have a keen interest in programming, technology, and continuous skill enhancement to excel in the IT domain.</p>
-            <a href="#contact" class="contact-button">Contact Me</a>
         </div>
-        <div class="image-container">
-        <img src="708455430-99782286521_12-s5-v1.jpg" alt="Divya Sachan">
-        </div>
-    </section>
+    </nav>
 
-    <style>
-        .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #000; 
-            padding: 20px;
-            width: 250px;
-            height: 250px;
-            margin: auto; 
-            overflow: hidden;
-        }
-    
-        .image-container img {
-            width: 230px;
-            height: 230px;
-            border-radius: 0;
-            animation: move 3s infinite ease-in-out; 
-        }
-    
-        @keyframes move {
-            0%, 100% {
-                transform: translateY(0); 
-            }
-            50% {
-                transform: translateY(-10px); 
-        }
-    </style>
+    <div class="container">
+        <section id="hero">
+            <div class="left">
+                <div class="content">
+                    <h1>Divya Sachan</h1>
+                    <h2>Student...</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sit quia debitis voluptates
+                        repudiandae dolorum incidunt </p>
+                </div>
 
-    <footer>
-        <p>&copy; 2025 Divya Sachan. All Rights Reserved.</p>
-        <div class="social-icons">
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Twitter</a>
-        </div>
-    </footer>
+                <ul class="social-handles">
+                    <li class="icon">
+                        <a href="">
+                            <img src="./assets/icons/social icons/github.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a href="">
+                            <img src="./assets/icons/social icons/insta.svg " alt="">
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a href="">
+                            <img src="./assets/icons/social icons/linkedin.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a href="">
+                            <img src="./assets/icons/social icons/leetcode.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="right">
+                <img src="./assets/images/avatar2.jpg" alt="avatar">
+            </div>
+        </section>
+    </div>
 </body>
+
 </html>
