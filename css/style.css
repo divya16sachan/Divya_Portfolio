@@ -1,22 +1,28 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy&display=swap');
 
 
 * {
-    margin : 0;
-    padding : 0;
+    margin: 0;
+    padding: 0;
     list-style: none;
     text-decoration: none;
     font-family: "Poppins", sans-serif;
+    font-family: cursive;
     box-sizing: border-box;
 }
-body{
+
+:root {
+    --color-primary: #b45650;
+    --color-muted: rgb(52, 52, 52);
+}
+
+body {
     padding-top: 70px;
     min-height: 100svh;
     width: 100vw;
 }
 
-.container{
+.container {
     max-width: 900px;
     /* border: 1px solid black; */
     margin: auto;
@@ -27,7 +33,7 @@ body{
     height: 350px;
 }
 
-#hero .left{
+#hero .left {
     padding: 10px;
     flex: 1;
     display: flex;
@@ -35,7 +41,8 @@ body{
     justify-content: center;
     position: relative;
 }
-#hero .left::before{
+
+#hero .left::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -47,37 +54,39 @@ body{
     filter: blur(100px);
 }
 
-#hero .left .content {
-}
+#hero .left .content {}
 
-#hero .right{
+#hero .right {
     background: url(../assets/images/splashBrown.png) no-repeat;
     flex: 1;
+    background-position: center;
     background-size: cover;
 }
-#hero .right img{
+
+#hero .right img {
     height: 100%;
     width: 100%;
     object-fit: contain;
 }
 
-#hero .left .content h1{
+#hero .left .content h1 {
     font-family: "Satisfy";
     font-size: 48px;
-    color: #b45650;
-}
-#hero .left .content h2{
-    font-family: "Dancing Script";
-    color: #b45650;
+    color: var(--color-primary);
 }
 
-#hero .left p{
+#hero .left .content h2 {
+    font-family: "Dancing Script";
+    color: var(--color-primary);
+}
+
+#hero .left p {
     margin-top: 20px;
     margin-bottom: 20px;
-    color: rgb(52, 52, 52);
+    color: var(--color-muted);
 }
 
-nav{
+nav {
     padding: 8px 16px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     position: fixed;
@@ -87,24 +96,27 @@ nav{
     left: 0;
     z-index: 999;
 }
-nav .container{
+
+nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-nav .logo{
+
+nav .logo {
     font-weight: 600;
 }
-nav ul{
+
+nav ul {
     display: flex;
     align-items: center;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     background-color: antiquewhite;
 }
 
-nav ul li a{
+nav ul li a {
     transition: .3s ease;
     display: inline-block;
     padding: 4px 8px;
@@ -112,51 +124,55 @@ nav ul li a{
     color: black;
     border-radius: 4px;
 }
-#hero .left .social-handles{
+
+#hero .left .social-handles {
     display: flex;
     gap: 16px;
 }
 
-.icon:hover{
+.icon:hover {
     filter: brightness(130%) grayscale(30%);
     transform: scale(1.2);
 }
-.icon{
+
+.icon {
     transition: .3s ease-in-out;
     width: 32px;
     height: 32px;
     overflow: hidden;
 }
 
-.icon img{
+.icon img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-section{
+section {
     margin-bottom: 30px;
     padding: 20px;
 }
-section h2{
+
+section h2 {
     font-size: 32px;
     margin-bottom: 20px;
     font-family: "Satisfy";
-    color: #b45650;
+    color: var(--color-primary);
 }
 
 
 
 
 /* ===========  ABOUT =========== */
-#about{
-    border-radius: 20px;   
+#about {
+    border-radius: 20px;
     background: url(../assets/images/gradiant.jpg) no-repeat;
-    background-size: cover; 
+    background-size: cover;
     position: relative;
     overflow: hidden;
 }
-#about .backdrop{
+
+#about .backdrop {
     height: 100%;
     width: 100%;
     top: 0;
@@ -166,29 +182,91 @@ section h2{
     position: absolute;
     z-index: 0;
 }
-   
-#about .content{
+
+#about .content {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
-#about .content .left{
+
+#about .content .left {
     flex: 2;
     position: relative;
     z-index: 10;
 }
 
-#about .content .left p{
+#about .content .left p {
     margin-bottom: 16px;
 }
 
-#about .content .right{
+#about .content .right {
     flex: 1;
     position: relative;
     z-index: 10;
 }
 
-#about .content .right img{
+#about .content .right img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+
+/* ===========  EDUCATION =========== */
+#education li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+#education li::after {
+    width: 8px;
+    aspect-ratio: 1;
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    box-shadow: 0 0 0 3px #f8a39d;
+    top: 10px;
+    left: -4px;
+}
+
+#education li:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    height: calc(100% + 10px);
+    width: 1px;
+    background-color: var(--color-primary);
+    left: 0;
+    top: 10px;
+}
+
+#education p {
+    color: var(--color-muted);
+}
+
+
+
+
+@media screen and (max-width: 550px) {
+    #hero .right{
+        height: 250px;
+        overflow: hidden;
+        flex: auto;
+        background-size: contain;
+    }
+    #hero {
+        text-align: center;
+        height: auto;
+        flex-direction: column-reverse;
+    }
+    #hero .left .content h1{
+        font-size: 42px;
+    }
+    #hero .social-handles{
+        justify-content: center;
+    }
+
+    #about .right{
+        display: none;
+    }
 }

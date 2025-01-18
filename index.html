@@ -10,20 +10,19 @@
     <title>Divya Sachan Portfolio</title>
 
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/utils.css">
 </head>
 
 <body>
     <nav>
         <div class="container">
             <div class="logo">
-                <a href="/">Divya Sachan</a>
+                <a href="#">Divya Sachan</a>
             </div>
             <ul>
                 <li><a href="#about">about</a></li>
-                <li><a href="/">projects</a></li>
-                <li><a href="/">education</a></li>
-                <li><a href="/">contact</a></li>
+                <li><a href="#education">education</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#contact">contact</a></li>
 
             </ul>
         </div>
@@ -35,7 +34,8 @@
                 <div class="content">
                     <h1>Divya Sachan</h1>
                     <h2>Student...</h2>
-                    <p>Embarking on a journey at the intersection of passion and expertise, where innovation becomes a daily rhythm.</p>
+                    <p>Embarking on a journey at the intersection of passion and expertise, where innovation becomes a
+                        daily rhythm.</p>
                 </div>
 
                 <ul class="social-handles">
@@ -73,20 +73,83 @@
 
             <div class="content">
                 <div class="left">
-                    <p>Hi, I'm Divya! I'm currently pursuing my MCA from Graphic Era Deemed to be University, having completed my BCA with a 9.2 CGPA. I have a strong interest in both coding and management. My technical expertise includes Python, Basics of C++, HTML, CSS, and JavaScript to design and develop user-friendly web applications.</p>
-                    
-                    <p>In addition to coding, I find peace and creativity through Mandala art. This meditative art form not only helps me unwind but also sharpens my focus and problem-solving abilities, which directly benefits my approach to coding challenges. Alongside my passion for coding, I also have a deep interest in management, with expertise in Principles of Management and Business Communication.</p>
-                    
-                    <p>Beyond academics, I love traveling, especially to mountainous regions, playing table tennis, and reading novels. My recent reads include Verity by Colleen Hoover and Karma by Sadhguru. I enjoy tackling challenges and turning ideas into functional, visually appealing designs.</p>
-                    
-                    <p>Life has shaped me into a strong and resilient person, and I always strive to balance my responsibilities while keeping my passions alive.</p>
+                    <p>Hi, I'm Divya! I'm currently pursuing my MCA from Graphic Era Deemed to be University, having
+                        completed my BCA with a 9.2 CGPA. I have a strong interest in both coding and management. My
+                        technical expertise includes Python, Basics of C++, HTML, CSS, and JavaScript to design and
+                        develop user-friendly web applications.</p>
+
+                    <p>In addition to coding, I find peace and creativity through Mandala art. This meditative art form
+                        not only helps me unwind but also sharpens my focus and problem-solving abilities, which
+                        directly benefits my approach to coding challenges. Alongside my passion for coding, I also have
+                        a deep interest in management, with expertise in Principles of Management and Business
+                        Communication.</p>
+
+                    <p>Beyond academics, I love traveling, especially to mountainous regions, playing table tennis, and
+                        reading novels. My recent reads include Verity by Colleen Hoover and Karma by Sadhguru. I enjoy
+                        tackling challenges and turning ideas into functional, visually appealing designs.</p>
+
+                    <p>Life has shaped me into a strong and resilient person, and I always strive to balance my
+                        responsibilities while keeping my passions alive.</p>
                 </div>
                 <div class="right">
                     <img src="./assets/images/cat.png" alt="cat image">
                 </div>
             </div>
         </section>
+
+        <section id="education">
+            <h2>Education</h2>
+
+            <div class="content">
+                <ul>
+                    <li>
+                        <h3>10th Grade</h3>
+                        <P>From : Laughing Buddha Academy</P>
+                        <p>Scored : 86%</p>
+                    </li>
+
+                    <li>
+                        <h3>12th Grade</h3>
+                        <P>From : Laughing Buddha Academy</P>
+                        <p>Scored : 92%</p>
+                    </li>
+
+                    <li>
+                        <h3>BCA</h3>
+                        <p>From : PSIT College Of Higher Education</p>
+                        <p>Scored : 9.2 CGPA</p>
+                    </li>
+                    
+                    <li>
+                        <h3>MCA</h3>
+                        <p>From : Graphic Era Deemed to be University</p>
+                        <p>Currently Pursuing</p>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
     </div>
+
+
 </body>
 
+
+<script>
+    const nodeList = document.querySelectorAll('nav ul li a');
+    const padding = 50;
+    nodeList.forEach(node=>{
+        node.addEventListener('click', (e)=>{
+            e.preventDefault();
+            const sectionId = node.href.split('#')[1];
+            const section = document.querySelector(`#${sectionId}`);
+
+            window.scrollTo({
+                top: section.offsetTop - padding,
+                behavior: 'smooth',
+            })
+        })
+    })
+</script>
 </html>
