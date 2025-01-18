@@ -26,6 +26,7 @@ body {
     max-width: 900px;
     /* border: 1px solid black; */
     margin: auto;
+    padding: 0 8px;
 }
 
 #hero {
