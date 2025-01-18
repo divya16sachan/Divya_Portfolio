@@ -6,8 +6,7 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
-    font-family: "Poppins", sans-serif;
-    font-family: cursive;
+    font-family: cursive, "Poppins", sans-serif;
     box-sizing: border-box;
 }
 
