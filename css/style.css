@@ -248,8 +248,18 @@ section h2 {
 
 
 @media screen and (max-width: 550px) {
+    nav{
+        padding: 10px 0;
+        font-size: 14px;
+    }
+    nav .logo{
+        display: none;
+    }
+    nav .container{
+        justify-content: center
+    }
     #hero .right{
-        height: 250px;
+        height: 280px;
         overflow: hidden;
         flex: auto;
         background-size: contain;
