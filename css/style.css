@@ -158,6 +158,8 @@ section h2 {
     margin-bottom: 20px;
     font-family: "Satisfy";
     color: var(--color-primary);
+    position: relative;
+    display: inline-block;
 }
 
 
@@ -212,6 +214,9 @@ section h2 {
 
 
 /* ===========  EDUCATION =========== */
+#education h2{
+    position: relative;
+}
 #education li {
     margin-bottom: 10px;
     position: relative;
@@ -244,7 +249,17 @@ section h2 {
     color: var(--color-muted);
 }
 
-
+.butterfly::before{
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: 100px;
+    top: 0;
+    right: 0;
+    background: url(../assets/images/butterfly.gif) no-repeat;
+    background-size: contain;
+    transform: rotate(-45deg) translate(82%, 23%);
+}
 
 
 @media screen and (max-width: 550px) {
