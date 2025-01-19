@@ -2,6 +2,7 @@
     display: flex;
     gap: 8px;
     align-items: center;
+    flex-wrap: wrap;
 }
 .tags{
     display: flex;
@@ -20,7 +21,9 @@
     height: 20px;
     filter: brightness(500%);
 }
+
 .btn{
+    white-space: nowrap;
     text-align: center;
     background-color: rgb(26, 26, 26);
     color: white;
@@ -34,6 +37,7 @@
 }
 
 .pet-btn{
+    margin-top: 20px;
     text-align: center;
     position: relative;
     background-color: rgb(26, 26, 26);
@@ -76,3 +80,30 @@
     transform: translatey(17%);
     background-position-x: right;
 }
+
+.pet-btn.v4::before{
+    height: 50px;
+    background-image: url(../assets/images/puppy.png) ;
+    transform: translatey(16%);
+    background-position-x: right;
+}
+
+.pet-btn.v5{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    padding-right: 42px;
+}
+.pet-btn.v5::before{
+    height: 50px;
+    background-image: url(../assets/images/panda2.png);
+    transform: translatey(41%);
+    background-position-x: right;
+}
+.pet-btn.v6::before{
+    height: 50px;
+    background-image: url(../assets/images/teddy.png) ;
+    transform: translatey(24%);
+    background-position-x: right;
+}
+
